@@ -1,0 +1,136 @@
+//14. Створити клас Liquor, в якому представлені 5 напоїв, кожен з яких має чотири
+//характеристики: ціна, витримка, країна виробник.Четверту характеристику
+//оберіть самі.Реалізувати можливість покупцю обрати собі напой до смаку.
+//Вивести всі варіанти які йому підходять, якщо не підходить жоден – вивести
+//відповідне повідомлення.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    class Liquor
+    {
+        public int price;
+        public int aging;
+        public string country;
+        public int alcoholstrength;
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = 0;
+            Liquor Спотыкач = new Liquor();
+            Спотыкач.price = 200;
+            Спотыкач.aging = 5;
+            Спотыкач.country = "Украина";
+            Спотыкач.alcoholstrength = 20;
+            Liquor Егермейстер = new Liquor();
+            Егермейстер.price = 150;
+            Егермейстер.aging = 3;
+            Егермейстер.country = "Германия";
+            Егермейстер.alcoholstrength = 35;
+            Liquor Амаретто = new Liquor();
+            Амаретто.price = 150;
+            Амаретто.aging = 5;
+            Амаретто.country = "Италия";
+            Амаретто.alcoholstrength = 25;
+            Liquor Бехеровка = new Liquor();
+            Бехеровка.price = 100;
+            Бехеровка.aging = 1;
+            Бехеровка.country = "Чехия";
+            Бехеровка.alcoholstrength = 38;
+            Liquor Апероль = new Liquor();
+            Апероль.price = 200;
+            Апероль.aging = 2;
+            Апероль.country = "Италия";
+            Апероль.alcoholstrength = 15;
+            Console.WriteLine("Введите желаемую цену");
+            int p = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите желаемую выдержку");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите желаемую страну производителя");
+            string k = Console.ReadLine();
+            Console.WriteLine("Введите желаемую крепость");
+            int s = Convert.ToInt32(Console.ReadLine());
+            if(Спотыкач.price == p)
+            {
+                if(Спотыкач.aging == a)
+                {
+                    if(Спотыкач.country == k)
+                    {
+                        if(Спотыкач.alcoholstrength == s)
+                        {
+                            n++;
+                            Console.WriteLine("Спотыкач");
+                        }
+                    }
+                }
+            }
+            if (Егермейстер.price == p)
+            {
+                if (Егермейстер.aging == a)
+                {
+                    if (Егермейстер.country == k)
+                    {
+                        if (Егермейстер.alcoholstrength == s)
+                        {
+                            n++;
+                            Console.WriteLine("Егермейстер");
+                        }
+                    }
+                }
+            }
+            if (Амаретто.price == p)
+            {
+                if (Амаретто.aging == a)
+                {
+                    if (Амаретто.country == k)
+                    {
+                        if (Амаретто.alcoholstrength == s)
+                        {
+                            n++;
+                            Console.WriteLine("Амаретто");
+                        }
+                    }
+                }
+            }
+            if (Бехеровка.price == p)
+            {
+                if (Бехеровка.aging == a)
+                {
+                    if (Амаретто.country == k)
+                    {
+                        if (Бехеровка.alcoholstrength == s)
+                        {
+                            n++;
+                            Console.WriteLine("Бехеровка");
+                        }
+                    }
+                }
+            }
+            if (Апероль.price == p)
+            {
+                if (Апероль.aging == a)
+                {
+                    if (Апероль.country == k)
+                    {
+                        if (Апероль.alcoholstrength == s)
+                        {
+                            n++;
+                            Console.WriteLine("Апероль");
+                        }
+                    }
+                }
+            }
+            if (n == 0)
+            {
+                Console.WriteLine("По вашему запросу ничего не найдено");
+            }
+            Console.ReadLine();
+        }
+    }   
+}
